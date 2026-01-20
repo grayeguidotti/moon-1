@@ -7,6 +7,9 @@ function draw() {
   drawTarget(width/2, height/2);
 }
 
-function drawTarget(x,y){
+function drawTarget(x, y,){
+fill(0)
 ellipse(width/2, height/2, 10, 10)
+//fill(255)
+//ellipse(width/2, height/2, 25, 25)
 }
