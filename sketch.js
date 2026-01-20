@@ -4,12 +4,19 @@ function setup() {
 
 function draw() {
   background(220);
-  drawTarget(width/2, height/2);
+  drawTarget(width/2, height/2, 150);
 }
 
-function drawTarget(x, y,){
-fill(0)
-ellipse(width/2, height/2, 10, 10)
-//fill(255)
-//ellipse(width/2, height/2, 25, 25)
+function drawTarget(x, y, size){
+  noStroke();
+
+  fill(0, 0, 255);
+  circle(x, y, size * 0.5);
+
+  fill(255,0, 0);
+  circle(x, y, size * 0.75);
+
+  fill(255);
+  circle(x, y, size);
+
 }
