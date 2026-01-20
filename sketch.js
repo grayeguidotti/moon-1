@@ -10,17 +10,17 @@ function draw() {
 function drawTarget(x, y, size){
   noStroke();
   push();
-  fill(0, 0, 255);
+  fill(255, 0, 0);
   circle(x, y, size * 0.5);
   pop();
 
   push();  
-  fill(255,0, 0);
+  fill(255);
   circle(x, y, size * 0.75);
   pop();
 
   push();
-  fill(255);
+  fill(0, 0, 255);
   circle(x, y, size);
   pop();
 
