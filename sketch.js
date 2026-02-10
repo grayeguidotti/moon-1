@@ -1,5 +1,7 @@
 function setup() {
   createCanvas(400, 400);
+  //describe(a sketch that has a drawMoon function, uses phase (0, 30) using an image of a 
+  // moon and a black ellipse moving in front of the image to give waxing and waning moon)
 }
 
 function draw() {
