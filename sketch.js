@@ -3,11 +3,11 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  drawTarget(width/2, height/2, 150);
+  background(0);
+  drawMoonShadow(width/2, height/2, 150);
 }
 
-function drawTarget(x, y, size){
+function drawMoonShadow(x, y, size){
   noStroke();
   push();     //blue outer
   fill(0, 0, 255);
@@ -26,3 +26,5 @@ function drawTarget(x, y, size){
 
 
 }
+
+
