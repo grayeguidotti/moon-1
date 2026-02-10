@@ -16,10 +16,6 @@ function drawMoonShadow(x, y, size){
   strokeWeight(1);
   circle(x, y, size);
   pop();
-
-
-
-
 }
 
 
