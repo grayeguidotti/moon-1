@@ -23,7 +23,10 @@ ellipse(xLoc, height, 100, 100)                     //black circle
 }
 
 From Assignment: "Phase should be a number from 0 - 30, where 0 is a new moon, 15 is a full moon, and 30 is an almost new moon." 
-0 will be the the black circle will completely covering the image
+0 will be the the black circle will completely covering the image (xlocation of black circle will be the same as the image)
+1 will be the image beneath the black circle showing a tiny sliver on the left
+15 will be the black circle not on the image at all
+30 will be black circle almost 'off' the image showing a tiny sliver of the image on the right
 
 The mouseX and mouseY will determine how far the black circle will be left to right and how much of the ‘phase’
 
@@ -35,3 +38,13 @@ Moon image (reference from cool tshirt)
 Ellipse with black Fill
 Draw Moon Function
 Phase 
+if statement: 
+ if phase = (0, 14) {
+    map()
+ 
+}else{
+    map()
+}
+
+Mapping for location of black ellipse Reference: 
+    map(value, start1, stop1, start2, stop2, [withinBounds])
