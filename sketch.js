@@ -10,21 +10,14 @@ function draw() {
 }
 
 function drawMoonShadow(x, y, size){
-  noStroke();
-  push();     //blue outer
-  fill(0, 0, 255);
+  push();     //black "shadow""
+  stroke(255)
+  fill(0);
+  strokeWeight(1);
   circle(x, y, size);
   pop();
 
-  push();     //white middle
-  fill(255);
-  circle(x, y, size * 0.65);
-  pop();
-  
-  push();     //red center
-  fill(255, 0, 0);
-  circle(x, y, size * 0.25);
-  pop();
+
 
 
 }
