@@ -10,7 +10,7 @@ function draw() {
 }
 
 function drawMoonShadow(x, y, size){
-  push();     //black "shadow""
+  push();     // draw black "shadow""
   stroke(255)
   fill(0);
   strokeWeight(1);
@@ -18,4 +18,4 @@ function drawMoonShadow(x, y, size){
   pop();
 }
 
-
+//move black shadow over 
