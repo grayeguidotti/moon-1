@@ -32,12 +32,7 @@ The mouseX and mouseY will determine how far the black circle will be left to ri
 
 Things I need to determine;
 Size of the image to make the black circle match diameter of image.
-
-Things I need to make:
-Moon image (reference from cool tshirt)
-Ellipse with black Fill
-Draw Moon Function
-Phase 
+The if statement that will work with the map of the dark circle 'moving' over the image. 
 if statement: 
  if phase = (0, 14) {
     map()
@@ -45,6 +40,13 @@ if statement:
 }else{
     map()
 }
+
+Things I need to make:
+Moon image (reference from cool tshirt)
+Ellipse with black Fill
+Draw Moon Function
+Phase 
+
 
 Mapping for location of black ellipse Reference: 
     map(value, start1, stop1, start2, stop2, [withinBounds])
