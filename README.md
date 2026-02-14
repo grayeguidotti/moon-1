@@ -57,7 +57,7 @@ Key Pressed: https://p5js.org/reference/p5/keyPressed/
 
 ```javascript
 function drawMoonShadow(x, y, phase) {                   //draws the circle that passes in front of the moon image
-    Let xLoc = map(phase, 0, 30, 0, width);				//phase 0-30
+    Let xLoc = map(phase, 0, 30, width/2, height/2);				//phase 0-30?
     ellipse(xLoc, height, 100, 100)                     //black circle
 }
 ```
