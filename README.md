@@ -47,12 +47,14 @@ References:
 Mapping for location of black ellipse Reference: 
     `map(value, start1, stop1, start2, stop2, [withinBounds])`
     `stroke();`
+    `image(img, x, y, [width], [height])`
+
 Function https://p5js.org/reference/p5/function/
 If Statement: https://p5js.org/reference/p5/if/ 
 
 
 ```javascript
-function drawMoonShadow(x, y, phase) {                    //draws the circle that passes in front of the  image
+function drawMoonShadow(x, y, phase) {                   //draws the circle that passes in front of the moon image
     Let xLoc = map(phase, 0, 30, 0, width);				//phase 0-30
     ellipse(xLoc, height, 100, 100)                     //black circle
 }
