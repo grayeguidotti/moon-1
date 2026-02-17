@@ -9,7 +9,13 @@ function setup() {                            // a sketch that has a drawMoon fu
   createCanvas(1200, 800);
 }
 
+let p = 0;
+
 function draw() {
+  
+  p = p + .1;   
+  p = p % 30;                                          //draw black "shadow"
+
   background(0);
   push();
   imageMode(CENTER);
@@ -18,15 +24,24 @@ function draw() {
   pop();            
 
   // push();
-  drawMoonShadow(20, 400);  
-  // pop();                                                 //draw black "shadow"
+  drawMoonShadow(p, 400);  
+  // pop();     
+  console.log (p);
 }
 
 function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
   stroke(255)
   fill(0);
   strokeWeight(1);
-  let xLoc = map(phase, 30, 0, width, width/2)
+  let xLoc
+  if (phase <= 15) {
+    xLoc = map(phase, 0, 15, width/2, width)
+  }
+
+  if (phase > 15) {
+    xLoc = map(phase, 16, 30, width/2, 0)
+  }
+  
   circle(xLoc, height/2, size);             
 
 }
