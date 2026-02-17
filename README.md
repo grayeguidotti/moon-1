@@ -70,3 +70,10 @@ function keyPressed() {
   ```
 
  Can't get 30 to phase to the right instead of going left off the skecth page
+
+
+ possible for loop:
+ ```javascript
+ for(let i = 0; i < 30; i++>){
+  drawMoon(i, i*10); //this would draw 30 moons 10 pixels apart horizontally
+ }
