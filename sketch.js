@@ -13,7 +13,7 @@ let p = 0;
 
 function draw() {
   
-  p = p + .1;   
+  p = p + .01;   
   p = p % 30;                                          //draw black "shadow"
 
   background(0);
@@ -26,7 +26,7 @@ function draw() {
   // push();
   drawMoonShadow(p, 400);  
   // pop();     
-  console.log (p);
+  //console.log (p);
 }
 
 function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
