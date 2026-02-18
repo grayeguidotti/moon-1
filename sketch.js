@@ -32,7 +32,8 @@ function draw() {
 function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
   stroke(255)
   fill(0);
-  strokeWeight(1);
+  //strokeWeight(1);
+  noStroke();
   let xLoc
   if (phase <= 15) {
     xLoc = map(phase, 0, 15, width/2, width)
