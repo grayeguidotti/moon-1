@@ -1,7 +1,7 @@
 let img;
 
 function preload(){
-  img = loadImage('Assets/moonCopy.png');     //load image
+  img = loadImage('assets/moonCopy.png');     //load image
 }     
 
 function setup() {                            // a sketch that has a drawMoon function, uses phase (0, 30) using an image of a moon and a black ellipse moving in front of the image to give waxing and waning moon)
@@ -11,7 +11,7 @@ function setup() {                            // a sketch that has a drawMoon fu
 let p = 0;
 
 function draw() {
-  p = p + .05;   
+  p = p + .1;   
   p = p % 30;                                          //draw black "shadow"
   background(0);
   //push();
