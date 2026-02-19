@@ -1,5 +1,4 @@
 let img;
-//let phase;
 
 function preload(){
   img = loadImage('Assets/moonCopy.png');     //load image
@@ -12,49 +11,59 @@ function setup() {                            // a sketch that has a drawMoon fu
 let p = 0;
 
 function draw() {
-  p = p + .01;   
+  p = p + .05;   
   p = p % 30;                                          //draw black "shadow"
-
   background(0);
   //push();
-for(let i = 0; i < 30; i++){
-      drawMoon(i,i*50, height/10);            //this would draw 30 moons 10 pixels apart horizontally
-  }
+  for(let i = 0; i < 30; i++){
+      drawMoon(i,i*50, height/10, 400);            //this would draw 30 moons 10 pixels apart horizontally
+    }
   //pop();            
-
   // push();
-  drawMoonShadow(p, 400);  
+  drawMoon(p, width/2, height/2, 400,);  
   // pop();     
   //console.log (p);
 }
 
-function drawMoon(phase, locx, locy){
+function drawMoon(phase, locx, locy, size){
   imageMode(CENTER);
-  image(img, width/2, height/2, 500, 500);                  //draw the image, in the center 500 pixels big
+  image(img, locx, locy, 500, 500);                  //draw the image, in the center 500 pixels big
   describe('an image of a pixelated moon');
-}
-
-function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
   stroke(255)
   fill(0);
   //strokeWeight(1);
   noStroke();
   let xLoc
   if (phase <= 15) {
-    xLoc = map(phase, 0, 15, width/2, width)
-  }
-
+    xLoc = map(phase, 0, 15, locx, width)
+    }
   if (phase > 15) {
-    xLoc = map(phase, 15, 30, width/2, 0)
-  }
-  
-  circle(xLoc, height/2, size);             
-
+    xLoc = map(phase, 15, 30, locx, 0)
+    }
+  circle(xLoc, locy, size);
 }
+
+// // function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
+// //   stroke(255)
+// //   fill(0);
+// //   //strokeWeight(1);
+// //   noStroke();
+// //   let xLoc
+// //   if (phase <= 15) {
+// //     xLoc = map(phase, 0, 15, width/2, width)
+// //   }
+
+//   if (phase > 15) {
+//     xLoc = map(phase, 15, 30, width/2, 0)
+//   }
+  
+//   circle(xLoc, height/2, size);             
+
+// }
 
 
                                                                 
-//move black shadow over image using key pressed N = new moon (phase = 0), F = full moon (phase = 30)
+          //move black shadow over image using key pressed N = new moon (phase = 0), F = full moon (phase = 30)
 
 
 
