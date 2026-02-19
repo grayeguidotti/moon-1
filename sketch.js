@@ -11,23 +11,24 @@ function setup() {                            // a sketch that has a drawMoon fu
 let p = 0;
 
 function draw() {
-  p = p + .1;   
-  p = p % 30;                                          //draw black "shadow"
+  p = p + .05;   
+  p = p % 30;                                          
   background(0);
+  
   //push();
-  for(let i = 0; i < 30; i++){
-      drawMoon(i,i*50, height/10, 400);            //this would draw 30 moons 10 pixels apart horizontally
-    }
   //pop();            
   // push();
-  drawMoon(p, width/2, height/2, 400,);  
+  drawMoon(p, width/2, height/2, 400,);       //draw the image, in the center 400 pixels 
   // pop();     
   //console.log (p);
+   for(let i = 0; i < 30; i++){
+      drawMoon(i, i*50, height/10, 100);        //this would draw 30 moons 10 pixels apart horizontally
+    }
 }
 
 function drawMoon(phase, locx, locy, size){
   imageMode(CENTER);
-  image(img, locx, locy, 500, 500);                  //draw the image, in the center 500 pixels big
+  image(img, locx, locy, size, size);                  
   describe('an image of a pixelated moon');
   stroke(255)
   fill(0);
@@ -40,7 +41,7 @@ function drawMoon(phase, locx, locy, size){
   if (phase > 15) {
     xLoc = map(phase, 15, 30, locx, 0)
     }
-  circle(xLoc, locy, size);
+  circle(xLoc, locy, size);                                 //draw black "shadow"
 }
 
 // // function drawMoonShadow(phase, size){                   //create shadow function that maps the x location to phase numbers
